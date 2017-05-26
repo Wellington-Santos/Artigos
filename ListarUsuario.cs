@@ -24,29 +24,27 @@ namespace Artigos
         {
             var conn = Login.ConnectOpen;
             //Buscar todos usuários cadastrados
-            string sql = "Select us.Id_Usuario, us.Usuario,us.Senha, pe.NomePerfil from Usuarios as us inner join Perfil as pe on pe.Id_Perfil = us.Perfil ";
+            string sql = "Select * from usuarios ";
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             da.Fill(dt);
-            
-            if(dt.Rows.Count > 0)
+
+            if (dt.Rows.Count > 0)
             {
                 dataGridView1.DataSource = dt;
             }
-
-            
-
         }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0)
+                return;
 
-                UsuarioSelecionado = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            //Recuperar a linha selecionadas.
+            UsuarioSelecionado = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
 
-                Hide();
-
-
+            //Fechar a tela
+            Hide();
         }
     }
 }

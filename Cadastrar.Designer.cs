@@ -37,6 +37,7 @@
             this.cmbPerfil = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtSenha
@@ -128,11 +129,23 @@
             this.btnListar.Visible = false;
             this.btnListar.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(91, 162);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "Excluir";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // Cadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(421, 196);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.cmbPerfil);
@@ -162,5 +175,6 @@
         private System.Windows.Forms.ComboBox cmbPerfil;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.Button button3;
     }
 }
