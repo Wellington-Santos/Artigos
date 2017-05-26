@@ -24,7 +24,7 @@ namespace Artigos
         {
             var conn = Login.ConnectOpen;
             //Buscar todos usuários cadastrados
-            string sql = "Select * from usuarios ";
+            string sql = "Select us.Id_Usuario, us.Usuario,us.Senha, pe.NomePerfil from Usuarios as us inner join Perfil as pe on pe.Id_Perfil = us.Perfil ";
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             da.Fill(dt);
@@ -34,7 +34,7 @@ namespace Artigos
                 dataGridView1.DataSource = dt;
             }
 
-
+            
 
         }
 
@@ -42,7 +42,7 @@ namespace Artigos
         {
             if (e.RowIndex < 0)
 
-                UsuarioSelecionado = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                UsuarioSelecionado = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
 
                 Hide();
 

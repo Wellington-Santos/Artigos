@@ -33,6 +33,8 @@ namespace Artigos
             if(Login.perfilUsuario == 3)
             {
                 button1.Enabled = true;
+                button2.Enabled = true;
+                button3.Enabled = true;
             }
         }
 
@@ -40,6 +42,12 @@ namespace Artigos
         {
             var cad = new Cadastrar();
             cad.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var art = new CadastroArtigos();
+            art.ShowDialog();
         }
     }
 }

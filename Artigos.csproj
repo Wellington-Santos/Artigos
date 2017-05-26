@@ -67,6 +67,12 @@
     <Compile Include="Cadastrar.Designer.cs">
       <DependentUpon>Cadastrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastroArtigos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroArtigos.Designer.cs">
+      <DependentUpon>CadastroArtigos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conexao.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
@@ -90,6 +96,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Cadastrar.resx">
       <DependentUpon>Cadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroArtigos.resx">
+      <DependentUpon>CadastroArtigos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -131,7 +140,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>database.mdf</DependentUpon>
     </Content>
+    <None Include="images\revisionmin.png" />
+    <None Include="images\revision.png" />
     <None Include="images\iconUser.png" />
+    <None Include="images\articlemin.png" />
     <Content Include="images\login.png" />
   </ItemGroup>
   <ItemGroup>

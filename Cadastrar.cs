@@ -73,16 +73,15 @@ namespace Artigos
             if (listarUsu.UsuarioSelecionado == "")
                 return;
 
+            //MessageBox.Show("lISTAR USUARIO = ", listarUsu.UsuarioSelecionado); 
+
             var conn = Login.ConnectOpen;
             //Buscar usuario selecionado
 
             StringBuilder sql = new StringBuilder();
 
-            sql.Append(" select usu.Id_Usuario, usu.Usuario, usu.Senha, per.NomePerfil from Usuarios as usu");
-            sql.Append(" inner join  ");
-            sql.Append(" Perfil as per  ");
-            sql.Append("on Id_Perfil = Perfil");
-            sql.Append(" where ");
+            sql.Append(" select usu.Id_Usuario, usu.Usuario, usu.Senha, usu.Perfil from Usuarios as usu");
+            sql.Append(" where usu.Id_Usuario = " + listarUsu.UsuarioSelecionado );
 
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(sql.ToString(), conn);
@@ -94,8 +93,13 @@ namespace Artigos
             //Linha 0, Coluna 1 Senha
             txtSenha.Text = dt.Rows[0][1].ToString();
 
+            
             //Linha 0, Coluna 3 Perfil
-            cmbPerfil.Text = dt.Rows[0][3].ToString();
+            cmbPerfil.Text = dt.Rows[0][2].ToString();
+
+
+
+            
 
         }
 

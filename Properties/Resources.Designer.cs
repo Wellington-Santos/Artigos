@@ -63,6 +63,16 @@ namespace Artigos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap articlemin {
+            get {
+                object obj = ResourceManager.GetObject("articlemin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconUser {
             get {
                 object obj = ResourceManager.GetObject("iconUser", resourceCulture);
@@ -86,6 +96,26 @@ namespace Artigos.Properties {
         internal static System.Drawing.Bitmap login1 {
             get {
                 object obj = ResourceManager.GetObject("login1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap revision {
+            get {
+                object obj = ResourceManager.GetObject("revision", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap revisionmin {
+            get {
+                object obj = ResourceManager.GetObject("revisionmin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
